@@ -56,3 +56,20 @@ You can display all possible commands via `F2B-CLI /help`
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `History` Shows a formatted list which contains all IPs that have been banned and how often
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `History x.x.x.x` Shows the ban history of given IP x.x.x.x
+
+- `/Add` with following parameters:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Banned x.x.x.x` Bans IP x.x.x.x permanently and adds it to the database
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Trusted x.x.x.x` Adds IP x.x.x.x to the list of trusted IPs (IP will be ignored by the service)
+
+- `/Remove` with following parameters:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Trusted x.x.x.x` Removes IP x.x.x.x from the list of trusted IPs (when 'all' instead of an IP is used, all IPs are targeted)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `History x.x.x.x` Removes history of IP x.x.x.x (can be used with 'all')
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Banned x.x.x.x` Unbans IP x.x.x.x & removes it from the database (can be used with 'all')
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Banned x.x.x.x /S` Unbans IP x.x.x.x & prevents a reban if the IP happens to be in the log scan time (can be used with 'all')
