@@ -48,4 +48,11 @@ You can display all possible commands via `F2B-CLI /help`
 - `/About` Shows the Application version and link to this page
 - `/Start` Starts the service with formatted output in the current terminal session
 
-- `/Show` [ Banned | Trusted | [  History | History  "IP" ] ]
+- `/Show` with following parameters:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Banned` Shows a formatted list which contains the ban ID, IP, ban date & unban date
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Trusted` Shows a formatted list with all configured 'Trusted' IPs
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `History` Shows a formatted list which contains all IPs that have been banned and how often
+
