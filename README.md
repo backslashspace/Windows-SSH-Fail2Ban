@@ -4,7 +4,7 @@ ___
 Just like the original [Fail2Ban](https://github.com/fail2ban/fail2ban), this configurable and easy to use solution works by scanning
 logs, in this case the Windows event log from the [Win32-OpenSSH](https://github.com/PowerShell/Win32-OpenSSH) service and bans IPs with
 too many failed authentication attempts, whether with passwords or public/private key authentication. It does this by updating firewall rules
-to reject new connections from those IPs for a configurable amount of time.
+to reject new connections from those IPs for a configurable amount of time.<br /><br />
 [IPv4 & IPv6 are supported]
 
 This program is able to reduce the rate of incorrect authentication
