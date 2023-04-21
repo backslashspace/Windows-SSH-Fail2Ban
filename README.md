@@ -40,9 +40,21 @@ The solution consists of two components: the service and the command line applic
 The command line application has the same functionality plus management 
 features for banned IPs, 'trusted' IPs and IPs ban history.
 
-You can display all possible commands via `F2B-CLI /help`
+#### F2B-SRV & config: How it works and what it does
+
+By default the program will check every 5 seconds (`LogScanIntervall=5/s`) the last hour (`LogScanTime=1/h`) of the sshd log, and will ban every IP that exceeds 10 failed attempts (`FailTrigger=10`). 
+By default, if the server and client are unable to exchange their banners or fail to negotiate a key exchange algorithm, this will be counted as a failed attempt, which can be deactivated (`CountBannerError=true`, 
+`CatchNegotiationErrors=true`).
+Furthermore, automatic permanent bans are deactivated (`PermBan=false`) by default.
+
+The ban duration can be configured like the following:
+`BanTime=1/h,3/h,1/d,7/d,14/d,1/M,3/M`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(More or less values are possible)
+Forexample, this will result in the first ban being 1 hour long, the third 1 day and the 7th 3 months long, after 7 times the last configured time will be used (3 months in this example), if `PermBan` is set to true, the IP will be permanently banned.
+Alternatively if `BanTime=off` & `PermBan=true`the IP will be permanently banned on the first offense.
 
 #### `F2B-CLI` The command line
+
+You can display all possible commands via `F2B-CLI /help`
 
 - `/Help` Shows all possible commands and format
 - `/About` Shows the Application version and link to this page
@@ -73,3 +85,6 @@ You can display all possible commands via `F2B-CLI /help`
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Banned x.x.x.x` Unbans IP x.x.x.x & removes it from the database (can be used with 'all')
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `Banned x.x.x.x /S` Unbans IP x.x.x.x & prevents a reban if the IP happens to be in the log scan time (can be used with 'all')
+
+
+This information is stored in the Registry under `HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH-Fail2Ban`
