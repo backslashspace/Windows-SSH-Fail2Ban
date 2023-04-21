@@ -95,3 +95,4 @@ You can display all possible commands via `F2B-CLI /help`
 This information is stored in the Registry under `HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH-Fail2Ban`
 
 ___
+Written in C# 9.0 and running on Net. Framework 4.8.
