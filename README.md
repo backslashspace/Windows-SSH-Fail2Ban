@@ -47,10 +47,15 @@ By default, if the server and client are unable to exchange their banners or fai
 `CatchNegotiationErrors=true`).
 Furthermore, automatic permanent bans are deactivated (`PermBan=false`) by default.
 
-The ban duration can be configured like the following:
-`BanTime=1/h,3/h,1/d,7/d,14/d,1/M,3/M`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(More or less values are possible)
+The ban duration can be configured like the following:<br />
+`BanTime=1/h,3/h,1/d,7/d,14/d,1/M,3/M`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(More or less values are possible)<br />
 Forexample, this will result in the first ban being 1 hour long, the third 1 day and the 7th 3 months long, after 7 times the last configured time will be used (3 months in this example), if `PermBan` is set to true, the IP will be permanently banned.
 Alternatively if `BanTime=off` & `PermBan=true`the IP will be permanently banned on the first offense.
+
+When a ban is triggered, the program will block the IP based on its 
+history for the configured amount of time and adds it to its database, 
+automatic unbans are handled by the Windows Task Scheduler, which 
+updates the firewall, & database.
 
 #### `F2B-CLI` The command line
 
@@ -88,3 +93,5 @@ You can display all possible commands via `F2B-CLI /help`
 
 
 This information is stored in the Registry under `HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH-Fail2Ban`
+
+___
