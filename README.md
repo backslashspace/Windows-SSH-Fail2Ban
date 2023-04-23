@@ -53,6 +53,8 @@ The ban duration can be configured like the following:<br />
 Forexample, this will result in the first ban being 1 hour long, the third 1 day and the 7th 3 months long, after 7 times the last configured time will be used (3 months in this example), if `PermBan` is set to true, the IP will be permanently banned.
 Alternatively if `BanTime=off` & `PermBan=true`the IP will be permanently banned on the first offense.
 
+A misconfiguration will not result in a crash, but in a fallback to the default value of the invalid config.
+
 When a ban is triggered, the program will block the IP based on its 
 history for the configured amount of time and adds it to its database, 
 automatic unbans are handled by the Windows Task Scheduler, which 
