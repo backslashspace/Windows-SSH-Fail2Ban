@@ -24,7 +24,7 @@ The installation is straight forward and only takes a couple clicks:
 - Follow the installation instructions
 - Done
 
-#### What the installer does
+### What the installer does
 1. The installer will extract the following files to `C:\Program Files\OpenSSH-Fail2Ban\`:
 
   - `F2B-SRV.exe`: the service application
@@ -33,7 +33,7 @@ The installation is straight forward and only takes a couple clicks:
 
 2. `C:\Program Files\OpenSSH-Fail2Ban\` will be added to the System Path variable, making `F2B-CLI.exe` globally accessible in the command line.
 
-3. `F2B-SRV.exe` will be registered as a Windows Service with the name `OpenSSH Fail2Ban`, and is configured by default to start at boot.
+3. `F2B-SRV.exe` will be registered as a Windows Service with the name `OpenSSH Fail2Ban` and is configured by default to start at boot.
 ___
 
 ## Feature & capabilities
@@ -41,7 +41,7 @@ The solution consists of two components: the service and the command line applic
 The command line application has the same functionality plus management 
 features for banned IPs, 'trusted' IPs and IPs ban history.
 
-#### F2B-SRV & config: How it works and what it does
+### F2B-SRV & config: How it works and what it does
 
 By default the program will check every 5 seconds (`LogScanIntervall=5/s`) the last hour (`LogScanTime=1/h`) of the sshd log, and will ban every IP that exceeds 10 failed attempts (`FailTrigger=10`). 
 By default, if the server and client are unable to exchange their banners or fail to negotiate a key exchange algorithm, this will be counted as a failed attempt, which can be deactivated (`CountBannerError=true`, 
@@ -56,7 +56,7 @@ Alternatively if `BanTime=off` & `PermBan=true`the IP will be permanently banned
 When a ban is triggered, the program will block the IP based on its 
 history for the configured amount of time and adds it to its database, 
 automatic unbans are handled by the Windows Task Scheduler, which 
-updates the firewall, & database.
+updates the firewall & database.
 
 Furthermore, every ban is logged in the Windows event log under `OpenSSH-Fail2Ban` with the following information: 
 - banned IP
@@ -104,5 +104,6 @@ You can display all possible commands via `F2B-CLI /help`
 This information is stored in the Registry under `HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH-Fail2Ban`
 
 ___
-Written in C# 9.0 and running on .Net Framework 4.8.<br />
+Written in C# 9.0 and running on .Net Framework 4.8<br />
+Ram usage ~11.5 MB<br />
 Tested with OpenSSH V8.9.1.0p1
