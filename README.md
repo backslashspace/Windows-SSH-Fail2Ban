@@ -1,5 +1,5 @@
 ___
-# Windows SSH Fail2Ban: SSH Brute-Force protection 
+# Windows Fail2Ban: SSH Brute-Force protection 
 
 Just like the original [Fail2Ban](https://github.com/fail2ban/fail2ban), this configurable and easy to use solution works by scanning
 logs, in this case the Windows event log from the [Win32-OpenSSH](https://github.com/PowerShell/Win32-OpenSSH) service and bans IPs with
@@ -57,6 +57,14 @@ When a ban is triggered, the program will block the IP based on its
 history for the configured amount of time and adds it to its database, 
 automatic unbans are handled by the Windows Task Scheduler, which 
 updates the firewall, & database.
+
+Furthermore, every ban is logged in the Windows event log under `OpenSSH-Fail2Ban` with the following information: 
+- banned IP
+- failed authentication method / used username*s
+- assigned ban ID
+- ban duration
+- ban time
+- unban time
 
 #### `F2B-CLI` The command line
 
