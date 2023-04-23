@@ -64,6 +64,7 @@ Furthermore, every ban is logged in the Windows event log under `OpenSSH-Fail2Ba
 - banned IP
 - failed authentication method / used username*s
 - assigned ban ID
+- times banned before
 - ban duration
 - ban time
 - unban time
