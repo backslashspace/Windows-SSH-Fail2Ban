@@ -41,7 +41,7 @@ The solution consists of two components: the service and the command line applic
 The command line application has the same functionality plus management 
 features for banned IPs, 'trusted' IPs and IPs ban history.
 
-### F2B-SRV & config: How it works and what it does
+### F2B-SRV & config: How it works
 
 By default the program will check every 5 seconds (`LogScanIntervall=5/s`) the last hour (`LogScanTime=1/h`) of the sshd log, and will ban every IP that exceeds 10 failed attempts (`FailTrigger=10`). 
 By default, if the server and client are unable to exchange their banners or fail to negotiate a key exchange algorithm, this will be counted as a failed attempt, which can be deactivated (`CountBannerError=true`, 
