@@ -1,0 +1,50 @@
+#############################################################
+#										#
+#	OpenSSH Fail2Ban for Windows					#
+#										#
+#	This file must be in the same directory as		#
+#	the F2B-SRV.exe and F2B-CLI.exe in order to be loaded	#
+#										#
+#	- Use natural numbers (Int32)					#
+#	- Do not change the config order				#
+#										#	
+#############################################################
+#			#
+#  s = seconds	#
+#  m = minutes	#
+#  h = hours	#
+#  d = days		#
+#  M = months	#
+#			#
+###################
+
+
+# Timeframe to fetch from the log
+LogScanTime=1/h
+
+
+#Time between each log scan
+LogScanIntervall=5/s
+
+
+#Required failed attempts to ban host
+FailTrigger=10
+
+
+#Count BannerExchange errors as failed attempt
+CountBannerError=true
+
+
+#Count KEX (KeyExchange) errors as failed attempt
+CatchNegotiationErrors=true
+
+
+
+#Ban time settings:
+# PermBan: true + BanTime:xx,xx,xx...	= bans permanently after last configured timespan
+# PermBan: true+ BanTime: off			= bans permanently on first offense
+# PermBan: false + BanTime:xx,xx,xx...	= continues to ban for the last configured timespan after reaching the configured end 
+
+PermBan=false
+
+BanTime=1/h,3/h,1/d,7/d,14/d,1/M,3/M
