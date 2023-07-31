@@ -20,7 +20,7 @@ namespace F2B_CLI
     {
         //=========================================================================================================================
 
-        const String Version = "1.0.0.0";
+        const String Version = "1.1.0.0";
 
         public class Config
         {
@@ -155,7 +155,7 @@ namespace F2B_CLI
         public static String[,] GetLog()
         {
             //get lookup time
-            string LogTime = Config.LogScanTime[1] switch
+            String LogTime = Config.LogScanTime[1] switch
             {
                 "m" => DateTime.Now.AddMinutes(Int32.Parse(Config.LogScanTime[0]) * -1).ToUniversalTime().ToString("o"),
                 "h" => DateTime.Now.AddHours(Int32.Parse(Config.LogScanTime[0]) * -1).ToUniversalTime().ToString("o"),

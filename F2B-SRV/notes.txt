@@ -1,0 +1,24 @@
+﻿
+
+
+add /show banned, trusted, history total show count for displayed ips / items
+
+
+
+    eggsplain [FW|T|DB] 10.0.0.17
+
+-------------------------------------------------------------------------
+
+
+
+
+
+===== inst staff ======
+
+
+SSH Fail2Ban: A configurable solution that protects the OpenSSH service from brute-force attacks.
+The program consists of two parts, the Windows service (F2B-SRV.exe), which is made to run in the background and start with Windows and the SSH service, and the commanding version (this).
+
+
+
+​

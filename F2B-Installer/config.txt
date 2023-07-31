@@ -27,6 +27,10 @@ LogScanTime=1/h
 LogScanIntervall=5/s
 
 
+#Ban type
+Type=host
+
+
 #Required failed attempts to ban host
 FailTrigger=10
 
@@ -37,7 +41,6 @@ CountBannerError=true
 
 #Count KEX (KeyExchange) errors as failed attempt
 CatchNegotiationErrors=true
-
 
 
 #Ban time settings:

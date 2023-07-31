@@ -226,7 +226,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imageres_5319.ico" />
-    <Content Include="temp.txt" />
+    <Content Include="notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
