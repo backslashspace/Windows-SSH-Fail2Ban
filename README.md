@@ -107,6 +107,6 @@ You can display all possible commands via `F2B-CLI /help`
 This information is stored in the Registry under `HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH-Fail2Ban`
 
 ___
-Written in C# 9.0 and running on .Net Framework 4.8<br />
+Written in C# 10.0 and running on .Net Framework 4.8<br />
 Ram usage ~15 MB<br />
 Tested with OpenSSH V8.9.1.0p1
