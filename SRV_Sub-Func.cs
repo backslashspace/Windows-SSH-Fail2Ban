@@ -1,9 +1,6 @@
-﻿using System.IO;
-using System.Threading;
-
-namespace F2B_SRV
+﻿namespace F2B_SRV
 {
-    partial class Service
+    partial class SRV_Info
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -18,7 +15,8 @@ namespace F2B_SRV
 
         private void InitializeComponent()
         {
-            this.ServiceName = "F2B";
+            components = new System.ComponentModel.Container();
+            this.ServiceName = "Windows_SSH_Fail2Ban";
         }
     }
 }
